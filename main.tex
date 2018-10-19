@@ -6,6 +6,8 @@
 
 
 \documentclass[oneside,a4paper,12pt, times]{book}
+\usepackage[backend=biber]{biblatex}
+\addbibresource{coda.bib}
 \usepackage[left=1.5in, right=1in, top=1in, bottom=1.25in]{geometry}
 \onehalfspacing
 \setlength{\parskip}{12pt}
@@ -27,6 +29,8 @@
 
 \usepackage[]{hyperref}
 \usepackage{tikz}
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
 \usetikzlibrary{arrows,shapes,snakes,automata,backgrounds,petri}
 \usepackage{titlesec}
 \usepackage{tabularx}
@@ -42,7 +46,9 @@
 \usepackage{float}
 \usepackage{subcaption}
 \usepackage{multirow}
-
+\usepackage{biblatex}
+\usepackage{url}
+\addbibresource{coda.bib}
 \usepackage[ruled,vlined]{algorithm2e}
 
 \begin{document}
@@ -193,7 +199,7 @@ continuous Internet connection, for our Project.}
 
  \-\hspace{0.5in}\textit{Robots and AI based systems are now slowly taking over many sectors such as support,
 industrial automation, etc. Our aim is to develop one such intelligent engine, which will
-allow users to give commands in natural English to perform a particular task/s on the client
+allow users to give commands in natural english to perform a particular task/s on the client
 machine, which would then be analyzed and converted into appropriate terminal
 commands/code snippet generation using natural language Processing and Machine
 Learning. System can be integrated with VCS like GitHub, Project management application
@@ -202,7 +208,7 @@ in user input. Such a system finds useful application in a Virtual Intelligent A
 which can be based on remote access and can be handled easily by naive users as well.
 principles, to run on the client device}
 
-Keywords : NLP, Deep Learning, Text Mining
+Keywords: Text Mining, NLP, Deep Learning
 \\ 
 \\
 \-\hspace{0.5in}
@@ -258,11 +264,21 @@ Para3
          Para 1
 
 \chapter{Literature Survey}
+This Chapter presents works related to this project. Work has been done on individual aspects of the project as a whole. Ranking models and code summarizing systems have been developed but not under a single roof. Also they are built for distinct languages. 
 \section{Paper 1}
-Para1
-
+StackOverflow mining for programming prompter\cite{monperrus} implements a IDE plugin that when given a context in the IDE, automatically gets pertinent discussions from Stack Overflow, evaluates their relevance, and, if a given confidence threshold is surpassed, notifies the developer about the available help. The Ranking model helps to evaluate its relevance.
 \section{Paper 2}
-Para 2
+Deep Code Search\cite{gu2018deep} discusses previously written code snippets by searching through a large-scale code base. Instead of matching text similarity, their approach jointly embeds code snippets and natural language descriptions into a high-dimensional vector space, in such a way that code snippet and its corresponding description have similar vectors.
+\section{Paper 3}
+Summarizing Source Code\cite{iyer2016summarizing} presents datadriven
+approach for generating high level
+summaries of source code. It presents the use of neural networks with attention to
+produce sentences that describe code snippets and queries.The model is trained using corpus
+collected from StackOverflow.
+\section{Paper 4}
+Automatic documentation generation \cite{mcburney2014automatic} proposes a technique that includes this context by analyzing
+how the Java methods are invoked. Programmers benefit from the generated documentation
+because it includes context information. This paper puts forth Natural Language Generation and Page Ranking methods for generating contextual document generation.
 \vskip 10cm
 
 			
@@ -354,29 +370,27 @@ Content
  \subsection{DFD Level 0}
  \begin{center}
      \centering
-     \includegraphics[width=400pt]{dfdzero.png}
+         \includegraphics[width=400pt]{DFD0.jpg}}
      \captionof{figure}{DFD Level 0}
      \label{fig:my_label}
  \end{center}
     
    
 \subsection{DFD Level 1}
-\vskip 1cm
-Given message recommend users
-\begin{figure}[h]
-    \centering
-\includegraphics[width=400pt]{dfdone.png}    \caption{DFD Level 1(Message)}
-    \label{fig:my_label}
-\end{figure}
+ \begin{center}
+     \centering
+         \includegraphics[width=400pt]{DF1(Voice_input).jpg}}}
+     \captionof{figure}{DFD Level 1 (Voice Input)}
+     \label{fig:my_label}
+ \end{center}
     
 \subsection{DFD Level 1}
-\vskip 1cm
-Given user recommend messages
-\begin{figure}[h]
-    \centering
-\includegraphics[width=400pt]{dfdone_.png}    \caption{DFD Level 1(User)}
-    \label{fig:my_label}
-\end{figure}
+ \begin{center}
+     \centering
+         \includegraphics[width=400pt]{DFD1.jpg}}}}
+     \captionof{figure}{DFD Level 1 (Code Upload)}
+     \label{fig:my_label}
+ \end{center}
    
  
  \section{UML Diagrams}
@@ -389,12 +403,11 @@ Given user recommend messages
 \end{center}
   
  \subsection{Activity Diagram}
- \begin{center}
-     \centering
-\includegraphics[width=450pt,height=520pt]{activity.png}
+ \begin{/raggedleft}
+\includegraphics[width=520pt,height=520pt]{ActivityDiagram.jpg}}
 \captionof{figure}{Activity Diagram}
      \label{fig:my_label}
- \end{center}
+ \end{/raggedleft}
   
 \subsection{Communication Diagram}
 \begin{center}
@@ -417,31 +430,49 @@ Given user recommend messages
 
 \chapter{Other Specification}
 \section{Advantages}
-\begin{itemize}
-	\item Item
-    \item Item
-    \item Item
-    \item Item
-\end{itemize}
-
-
-
+\begin{enumerate}
+    \item Human effort reduction
+    \begin{itemize}
+        \item Trivial commands can be automated and thus user's time is saved. 
+    \end{itemize}
+    
+    \item Beginner Friendly
+    \begin{itemize}
+        \item Beginners in coding can easily query the assistant and find the to their problems at one place.
+        \item Integration with other tools helps inculcate better coding practices.
+    \end{itemize}
+    \item Deep Integration with work environments
+    \begin{itemize}
+        \item Integration with VCS, project management tools like slack helps in keeping track of the development of project. 
+    \end{itemize}
+\end{enumerate}
 
 \section{Limitations}
-\begin{itemize}
-	\item Item 
-    \item Item
-\end{itemize}
+\begin{enumerate}
+   
+    \item Quantifying code quality
+    \begin{itemize}
+        \item Different metrics judge different aspects of code and thus universal metric of judging the solution proposed is unavailable.
+        \item Feedback from the user (Strongly Agree, Agree, Disagree) needs to be introduced which may be influenced by external factors
+    \end{itemize}
+    \item Dependence on external tools and API
+    \begin{itemize}
+        \item The system does not guarantee solution to every problem as it is dependent on external tools (stackoverflow/documentation) for the results.
+        \item The answers from the web may be inaccurate and thus introduce fallacies in the system
+    \end{itemize}
+     \item Code Relevance
+    \begin{itemize}
+        \item The output returned from may have inaccuracies generated because of the ranking algorithm, which may rank 
+    \end{itemize}
+\end{enumerate}
 
 
 \section{Applications}
-\begin{itemize}
-	\item Item
-    \item Item
-\end{itemize}
-
-
-
+\begin{enumerate}
+    \item Beginners in coding: Time wasted in searching for trivial code can be reduced with a large margin
+    \item Team project development: Integration with other working platforms helps in keeping track of the project better
+    \item Open Source Projects: Documentation generation which proves to be the most tedious task can be automated 
+\end{enumerate}
 
 
 
@@ -566,9 +597,6 @@ Fa : \\
 \end{appendices}
 
 \chapter{References}
-\begin{enumerate}
-\item [[ 1]] Paper name\\
-
-\end{enumerate}
+\printbibliography[heading=none]
 
 \end{document}
