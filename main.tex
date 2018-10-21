@@ -1,13 +1,11 @@
 %This is a very basic  BE PROJECT PRELIMINARY template.
 
 %############################################# 
-%#########Author :  PROJECT###########
+%#########Author : Dipak Shantanu Tanmay Tejas###########
 %#########COMPUTER ENGINEERING############
 
 
 \documentclass[oneside,a4paper,12pt, times]{book}
-\usepackage[backend=biber]{biblatex}
-\addbibresource{coda.bib}
 \usepackage[left=1.5in, right=1in, top=1in, bottom=1.25in]{geometry}
 \onehalfspacing
 \setlength{\parskip}{12pt}
@@ -29,8 +27,6 @@
 
 \usepackage[]{hyperref}
 \usepackage{tikz}
-\usepackage[utf8]{inputenc}
-\usepackage[english]{babel}
 \usetikzlibrary{arrows,shapes,snakes,automata,backgrounds,petri}
 \usepackage{titlesec}
 \usepackage{tabularx}
@@ -48,7 +44,7 @@
 \usepackage{multirow}
 \usepackage{biblatex}
 \usepackage{url}
-\addbibresource{coda.bib}
+\addbibresource{CODA.bib}
 \usepackage[ruled,vlined]{algorithm2e}
 
 \begin{document}
@@ -199,16 +195,14 @@ continuous Internet connection, for our Project.}
 
  \-\hspace{0.5in}\textit{Robots and AI based systems are now slowly taking over many sectors such as support,
 industrial automation, etc. Our aim is to develop one such intelligent engine, which will
-allow users to give commands in natural english to perform a particular task/s on the client
+allow users to give commands in natural English to perform a particular task/s on the client
 machine, which would then be analyzed and converted into appropriate terminal
-commands/code snippet generation using natural language Processing and Machine
+commands/code snippet generation using Natural Language Processing and Machine
 Learning. System can be integrated with VCS like GitHub, Project management application
 like Slack. The system will be able to constantly evolve and train itself to handle variations
 in user input. Such a system finds useful application in a Virtual Intelligent Assistant,
 which can be based on remote access and can be handled easily by naive users as well.
 principles, to run on the client device}
-
-Keywords: Text Mining, NLP, Deep Learning
 \\ 
 \\
 \-\hspace{0.5in}
@@ -241,27 +235,16 @@ Keywords: Text Mining, NLP, Deep Learning
 \chapter{Introduction}
 
 \section{Motivation}
-\-\hspace{0.5in}Para1
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=400pt,height=250pt]{motivation.png}   
-    \caption{Figure title}
-    \label{fig:my_label}
-\end{figure}
+\-\hspace{0.5in} Chatbots and virtual assistants represent a potential shift in how people interact with data and services online. Thus, they are a part of the evolution in user interface, which started initially with command line, moved over to GUI (Graphical User interface) and further now has moved on to Voice based Interfaces i.e. Chatbots. Chatbots are machine agents that serve as natural language user interfaces for data and service providers. Currently, chatbots are typically designed and developed for Mobile messaging applications. The current interest in chatbots is spurred by recent developments in artificial intelligence (AI) and machine learning . Chatbots are seen as a means for direct user or  customer engagement through text messaging for customer service or marketing purposes, bypassing the need for special-purpose apps or webpages.
 
-Para 2
-\begin{figure}[h]
-    \centering
-    \includegraphics[width=400pt,height=250pt]{motivation_.png}   
-    \caption{Figure title}
-    \label{fig:my_label}
-\end{figure}
-  
 
-Para3
+But we propose to extend the functionality of chatbots and assistants for our everyday purposes as well. As computer engineering students, one of the major chunk of our daily routines is occupied by coding and development related tasks. Also, it is evident that a major part of development and coding related tasks is wasted in searching for small queries and doubts, often related to how things are to be done, on the internet rather than actual coding, thus reducing the efficiency of our work. Also, in our course of work, we waste a lot of time in performing many trivial but important tasks, such as uploading our work on Version Control Systems for collaboration with our colleagues on which we tend to waste a lot of time due to the interaction with the GUI involved. Another common obstacle frequently faced by developers is the problem in understanding the code written by other developers or problems pertaining to code readability, due to which a lot of time is wasted, and efficiency of coding is reduced.A recent survey conducted by us among our peers also helped us strengthen the above claims regarding the reduction in efficiency during coding due to the mentioned reasons. 
+
+
+Hence with CODA, we propose to solve all the above mentioned problems currently being faced by developers and coders by incorporating features like voice based query resolver in integration with common doubt solving platforms like Stack Overflow, voice based execution of common terminal commands, integration with Version Control Systems and automatic code summarization capabilities. 
 \section{Problem Definition}
 \label{sec:problem}
-         Para 1
+        To develop a voice based assistant aiding developers and coders to increase the efficiency of their work by assisting in various trivial but consequential tasks like executing terminal commands, resolving code related queries by providing concise and time efficient solutions with integration with StackOverflow, automatic high level code summarization to understand code snippets, executing commands like creating, forking, branching respositories related to Version Control Systems like Github on voice input and creating Java based documentation for a given Java code snippet.    
 
 \chapter{Literature Survey}
 This Chapter presents works related to this project. Work has been done on individual aspects of the project as a whole. Ranking models and code summarizing systems have been developed but not under a single roof. Also they are built for distinct languages. 
@@ -287,7 +270,7 @@ because it includes context information. This paper puts forth Natural Language 
 \begin{itemize}
 \item \textbf{BACKGROUND TO THE PROPOSED WORK}:-\newline Developers in the field of IT play a pivotal role in the development of the field since, they are responsible for designing innovative and feasible applications that benefit the target customers. But most of their time is spent on surfing through the Internet for syntax related queries or understanding snippets written by other developers, rather than in developing the application logic itself. Thus, in this paced environment, it becomes essential for creating a software that aids the developers by not only providing quick syntax for various languages using their voice, but also enables them to understand code written by others by providing a succinct description of the code. 
 \item \textbf{OBJECTIVE/PURPOSE}:- \newline To create a voice-based assistant for aiding developers in providing code snippet summarization and voice-based query execution within 5 months.   
-\item \textbf{DELIVERABLES}:-\newline1.To create a voice-based assistant for interaction with clients. \newline2.To generate high level, english-interpretable summary of a given code snippet for the user. \newline3.Execute terminal commands for the user based on voice input.\newline4.Creating JAVA-based documentation for a given JAVA code snippet.\newline5.Integration with Github to provide voice-based creating, branching, forking, etc of repositories.\newline 6.Integration with StackOverflow for providing concise, and time efficient solution to specific code related queries.
+\item \textbf{DELIVERABLES}:-\newline1.To create a voice-based assistant for interaction with clients. \newline2.To generate high level, english-interpretable summary of a given code snippet for the user. \newline3.Execute terminal commands for the user based on voice input.\newline4.Creating Java-based documentation for a given Java code snippet.\newline5.Integration with Github to provide voice-based creating, branching, forking, etc of repositories.\newline 6.Integration with StackOverflow for providing concise, and time efficient solution to specific code related queries.
 \item \textbf{ASSUMPTIONS}:-\newline1.Microphone available on the machine on which the application is run.\newline2.Clients interacting with the assistant are aware of the basic sentence structures of English language.
 \end{itemize}
 \\
@@ -295,53 +278,164 @@ because it includes context information. This paper puts forth Natural Language 
 
 
 \section{Functional Requirements}  
-\subsection{FR1}
-\subsubsection{Description and Priority}
-Content
-\subsubsection{Functional Requirements}
-Content
+\subsection {Chatbot Capabilities}
+\-\hspace{0.5in} The assistant should be capable enough to understand commands in natural english language and  respond to any input it receives. If the bot does not understand the input, it should ask for a more simplified input. If the bot understands the input, it should respond with the correct and appropriate  information. If the bot needs more information to find an answer, it should ask for more information. 
 
-\subsection{FR2}
-\subsubsection{Description and Priority}
-Content
-\subsubsection{Functional Requirements}
-Content
+\subsection{Code Summarization}
+\-\hspace{0.5in}
 
 
 
-
-\section{External Interface Requirements }  
+\subsection{External Interface Requirements }  
 \subsection{User Interfaces}
 Content
-\section{Nonfunctional Requirements }  
 
+
+
+
+
+
+
+
+
+% --------------------------------------------------------------
+
+% Non-Functional Requirements Starts Here
+\section{Nonfunctional Requirements } 
+
+% Performance Requirements start Here
 \subsection{Performance Requirements}
+\begin{itemize}
+    \item
+    \textbf{Response Time:} 
+        Response time is expected to have 5 or less than 5 seconds as minimum 6s are required for attacker to enter in system.
+    \item
+    \textbf{Reliability:} 
+	    System should be reliable enough to detect all kinds of breach in system in order to secure  the system.
+    \item
+    \textbf{Scalability:} 
+		System should be able to extend the number of machines whenever required to extend.
+    \item
+    \textbf{Platform:} 
+	    System should work on LINUX based systems.
+\end{itemize}
+% Performance Requirements end here
 
+% Safety Requirements Start here
 \subsection{Safety Requirements}
+\begin{itemize}
+    \item
+    \textbf{Authorization:}
+        System should allow only authorised users to check and alter the system status.
+    \item
+    \textbf{Data Protection:}
+        Organization’s (actor’s) data should be private i.e. only accessible to lower tiers.
+\end{itemize}
+% Safety Requirements End here
 
+% Security Requirements start here
 \subsection{Security Requirements}
+\begin{itemize}
+    \item 
+        System should secure itself by checking the breach in system itself.
+\end{itemize}
+% Security Requirements end here
 
+% Software Quality Attributes Starts here
 \subsection{Software Quality Attributes}
+\begin{itemize}
+    \item
+        System should be able to handle by user with ease and quickly.
+    \item 
+        System output should be simple enough to be understood by everyone.
+    \item
+        System should be reliable and efficient enough for usage.
+    \item
+        Output should be readable.
+    \item
+        Software should be portable enough so that it can work on any LINUX based system without installing.
+\end{itemize}
+% Software Quality Attributes End here
 
+% Non Functional Requirements End here
+
+% ---------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+% ---------------------------------------------------------------
+
+% System Requirements starts here
 
 \section{System  Requirements } 
+
+% Database Requirements starts here
 \subsection{Database Requirements}
-
-\subsection{Minimum Software and Hardware Requirements}
 \begin{itemize}
-    \item Python 3
-    \item Torch framework
-    \item Google's DialogFlow framework
-    \item Suitable API's for integration with StackOverflow, Github, etc
-    \item Text Editor/ Integrated Development Environment(IDE)
-    \item ANTLR v4 (Another tool for Language Recognition) for JAVA parsing
-    \item Ubuntu 16.04 or above
-    \item Graphic Processing Unit(GPU)
-    \item Intel i5 Processor 7th Generation
-    \item 8GB RAM
+    \item 
+        MySQL database server for analytics
+    \item 
+        MongoDB for storing flow of conversations
 \end{itemize}
+% Database Requiremenst Ends here
 
+% Minimum Software Requirements starts here
+\subsection{Minimum Software Requirements}
+\begin{itemize}
+    \item 
+        Python 3
+    \item 
+        Torch framework
+    \item 
+        Google's DialogFlow framework
+    \item 
+        Suitable API's for integration with StackOverflow, Github, etc
+    \item 
+        Text Editor/ Integrated Development Environment(IDE)
+    \item 
+        ANTLR v4 (Another tool for Language Recognition) for JAVA parsing
+    \item 
+        Ubuntu 16.04 or above
+    \item 
+        Tkinter and similar front-end GUI frameworks
+\end{itemize}
+% Minimum Software Requirements ends here
+
+% Hardware Requirements starts here
 \subsection{Hardware Requirements}
+\begin{itemize}
+    \item 
+        Graphic Processing Unit(GPU)
+    \item 
+        Intel i5 Processor 7th Generation
+    \item   
+        8GB RAM
+    \item   
+        Microphone
+    \item   
+        Speaker
+\end{itemize}
+% Hardware Requirements ends here
+
+% System Requirements ends here
+
+% --------------------------------------------------------------
+
+
+
+
+
+
+
 
 
 \section{Analysis Model} 
@@ -370,27 +464,29 @@ Content
  \subsection{DFD Level 0}
  \begin{center}
      \centering
-         \includegraphics[width=400pt]{DFD0.jpg}}
+     \includegraphics[width=400pt]{dfdzero.png}
      \captionof{figure}{DFD Level 0}
      \label{fig:my_label}
  \end{center}
     
    
 \subsection{DFD Level 1}
- \begin{center}
-     \centering
-         \includegraphics[width=400pt]{DF1(Voice_input).jpg}}}
-     \captionof{figure}{DFD Level 1 (Voice Input)}
-     \label{fig:my_label}
- \end{center}
+\vskip 1cm
+Given message recommend users
+\begin{figure}[h]
+    \centering
+\includegraphics[width=400pt]{dfdone.png}    \caption{DFD Level 1(Message)}
+    \label{fig:my_label}
+\end{figure}
     
 \subsection{DFD Level 1}
- \begin{center}
-     \centering
-         \includegraphics[width=400pt]{DFD1.jpg}}}}
-     \captionof{figure}{DFD Level 1 (Code Upload)}
-     \label{fig:my_label}
- \end{center}
+\vskip 1cm
+Given user recommend messages
+\begin{figure}[h]
+    \centering
+\includegraphics[width=400pt]{dfdone_.png}    \caption{DFD Level 1(User)}
+    \label{fig:my_label}
+\end{figure}
    
  
  \section{UML Diagrams}
@@ -403,11 +499,12 @@ Content
 \end{center}
   
  \subsection{Activity Diagram}
- \begin{/raggedleft}
-\includegraphics[width=520pt,height=520pt]{ActivityDiagram.jpg}}
+ \begin{center}
+     \centering
+\includegraphics[width=450pt,height=520pt]{activity.png}
 \captionof{figure}{Activity Diagram}
      \label{fig:my_label}
- \end{/raggedleft}
+ \end{center}
   
 \subsection{Communication Diagram}
 \begin{center}
@@ -473,6 +570,9 @@ Content
     \item Team project development: Integration with other working platforms helps in keeping track of the project better
     \item Open Source Projects: Documentation generation which proves to be the most tedious task can be automated 
 \end{enumerate}
+
+
+
 
 
 
